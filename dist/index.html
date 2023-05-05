@@ -5,18 +5,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-<script defer src="bundleab6f6a84dcd3ba28c4ec.js"></script></head>
+<script defer src="bundleaf0c2de63d86295de816.js"></script></head>
 
 <body>
   <div class="main-container">
     <header class="heading">ToDo List</header>
     <main class="main cont-2">
-      <section class="card">
+      <button class="task-btn">New Task</button>
+      <dialog class="card">
         <form action="#">
           <fieldset>
             <div class="form-elem">
               <label for="todo">Title:</label>
-              <input type="text" id="todo" name="task" placeholder="enter a name">
+              <input type="text" id="todo" name="task">
             </div>
             <div class="form-elem">
               <label for="description">Description:</label>
@@ -42,10 +43,12 @@
               <textarea id="notes" name="notes" rows="4" cols="50"></textarea><br><br>
             </div>
 
-            <input type="button" value="Add Task">
+            <div class="btn-cont">
+              <button class="btn">Add Task</button>
+            </div>
           </fieldset>
         </form>
-      </section>
+      </dialog>
     </main>
     <footer class="footer">&#169 th3grimreaper | The Odin Project (2022)</footer>
   </div>
