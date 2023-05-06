@@ -7,6 +7,10 @@
   flex: 1;
 
   .task-btn {
+    background-color: v.$black-shade8;
+    color: v.$white-col;
+    border-radius: 5px;
+    border-style: none;
     padding: 0.5rem 1.5rem;
   }
 
@@ -48,8 +52,8 @@
           justify-content: center;
         }
         .btn {
+          @extend .task-btn;
           margin-top: 0.5rem;
-          padding: 0.5rem 1.5rem;
         }
 
         .btn + .btn {
