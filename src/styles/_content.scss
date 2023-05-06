@@ -1,3 +1,5 @@
+@use 'variables' as v;
+
 .main {
   display: flex;
   justify-content: center;
@@ -12,6 +14,8 @@
     position: absolute;
     inset: 50% auto auto 50%;
     transform: translate(-50%, -50%);
+    border-style: none;
+
     form {
       fieldset {
         padding: 1rem;
@@ -30,6 +34,9 @@
           textarea,
           select {
             width: 200px;
+            border-radius: 4px;
+            border: 1px solid v.$black-shade3;
+            padding: 0.25rem;
           }
           textarea {
             resize: none;
@@ -43,6 +50,10 @@
         .btn {
           margin-top: 0.5rem;
           padding: 0.5rem 1.5rem;
+        }
+
+        .btn + .btn {
+          margin-left: 0.25rem;
         }
       }
     }

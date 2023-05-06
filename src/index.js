@@ -1,4 +1,7 @@
 import './styles/main.scss'
-import { addTask } from './components/newtask'
+import { addTask, closeModal } from './components/DOMstuff'
 
-addTask()
+const startTodo = (() => {
+  addTask()
+  closeModal()
+})()
