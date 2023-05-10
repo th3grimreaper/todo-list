@@ -1,19 +1,29 @@
-export function addTask() {
-  const btn = document.querySelector('.task-btn')
-  const modal = document.querySelector('.card')
-
+export function addTask(btn, modal) {
   btn.addEventListener('click', () => {
     modal.showModal()
   })
 }
 
-export function closeModal() {
-  const btn = document.querySelector('.cancel')
-  const modal = document.querySelector('.card')
-
+export function closeModal(btn, modal) {
   btn.addEventListener('click', () => {
     modal.close()
   })
 }
 
-// export { addTask, closeModal }
+export function formValidation() {
+  const title = document.querySelector('#title')
+  const desc = document.querySelector('#description')
+  const notes = document.querySelector('#notes')
+  const date = document.querySelector('#duedate')
+  const priority = document.querySelector('#priority')
+  if (
+    title.reportValidity() &&
+    desc.reportValidity() &&
+    date.reportValidity() &&
+    priority.reportValidity() &&
+    notes.reportValidity()
+  ) {
+    return true
+  }
+  return false
+}

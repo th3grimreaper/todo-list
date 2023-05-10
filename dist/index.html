@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-<script defer src="bundled2449c0b0a3312baa6a5.js"></script></head>
+<script defer src="bundle365521560f540d4096f3.js"></script></head>
 
 <body>
   <div class="main-container">
@@ -16,22 +16,23 @@
         <form action="#">
           <fieldset>
             <div class="form-elem">
-              <label for="todo">Title:</label>
-              <input type="text" id="todo" name="task">
+              <label for="title">Title:</label>
+              <input type="text" id="title" name="task" pattern="[\w\s]+" required>
             </div>
             <div class="form-elem">
               <label for="description">Description:</label>
-              <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+              <textarea id="description" name="description" rows="4" cols="50" pattern="[\w\s]+"
+                required></textarea><br><br>
             </div>
 
             <div class="form-elem">
               <label for="duedate">Due Date:</label>
-              <input type="date" id="duedate" name="duedate"><br><br>
+              <input type="date" id="duedate" name="duedate" required><br><br>
             </div>
 
             <div class="form-elem">
               <label for="priority">Priority:</label>
-              <select id="priority" name="priority">
+              <select id="priority" name="priority" required>
                 <option value="low">Low</option>
                 <option value="medium">Medium</option>
                 <option value="high">High</option>
@@ -40,7 +41,7 @@
 
             <div class="form-elem">
               <label for="notes">Notes:</label>
-              <textarea id="notes" name="notes" rows="4" cols="50"></textarea><br><br>
+              <textarea id="notes" name="notes" rows="4" cols="50" pattern="[\w\s]+" required></textarea><br><br>
             </div>
 
             <div class="btn-cont">
