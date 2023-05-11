@@ -13,15 +13,13 @@ export function closeModal(btn, modal) {
 export function formValidation() {
   const title = document.querySelector('#title')
   const desc = document.querySelector('#description')
-  const notes = document.querySelector('#notes')
   const date = document.querySelector('#duedate')
   const priority = document.querySelector('#priority')
   if (
     title.reportValidity() &&
     desc.reportValidity() &&
     date.reportValidity() &&
-    priority.reportValidity() &&
-    notes.reportValidity()
+    priority.reportValidity()
   ) {
     return true
   }
