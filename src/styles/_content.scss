@@ -29,10 +29,13 @@
     position: absolute;
     inset: 50% auto auto 50%;
     transform: translate(-50%, -50%);
-    border-style: none;
+    border: none;
+    border-radius: 10px;
+    background-color: v.$black-shade8;
+    color: v.$white-col;
 
     form {
-      fieldset {
+      .form-cont {
         padding: 1rem;
 
         .form-elem {
@@ -52,6 +55,8 @@
             border-radius: 4px;
             border: 1px solid v.$black-shade3;
             padding: 0.25rem;
+            background-color: v.$white-shade4;
+            color: v.$white-col;
           }
           textarea {
             resize: none;
