@@ -1,5 +1,15 @@
 import { addTask, formValidation } from './DOMstuff'
 
+class task {
+  constructor(title, desc, date, priority, notes) {
+    this.title = title
+    this.desc = desc
+    this.date = date
+    this.notes = notes
+    this.priority = priority
+  }
+}
+
 const startTodo = (() => {
   const newTask = document.querySelector('.task-btn')
   const btnArr = document.querySelectorAll('.btn')
@@ -16,7 +26,7 @@ const startTodo = (() => {
           modal.close()
           form.reset()
         } else {
-          // console.log('fill out the form please')
+          alert('invalid details')
         }
       }
       if (event.target.classList.contains('cancel')) {
