@@ -20,6 +20,7 @@ const startTodo = (() => {
           modal.close()
           form.reset()
           console.log(myTasks[0])
+          console.log(myTasks[1])
         } else {
           alert('invalid details')
         }

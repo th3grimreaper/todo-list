@@ -1,5 +1,9 @@
 @mixin hoverEffect($color) {
   &:hover {
-    background-color: $color;
+    @include shadeCol($color);
   }
+}
+
+@mixin shadeCol($col) {
+  background-color: rgba($col, $col, $col, 1);
 }
