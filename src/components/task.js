@@ -1,4 +1,4 @@
-import { addTask, formValidation, pushTask } from './DOMstuff'
+import { addTask, createTaskCard, formValidation, pushTask } from './DOMstuff'
 
 const startTodo = (() => {
   const myTasks = []
@@ -19,6 +19,7 @@ const startTodo = (() => {
           myTasks.push(pushTask())
           modal.close()
           form.reset()
+          createTaskCard()
           console.log(myTasks[0])
           console.log(myTasks[1])
         } else {
