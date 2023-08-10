@@ -1,2 +1,2 @@
 import './styles/main.scss'
-import './components/task'
+import './components/main'

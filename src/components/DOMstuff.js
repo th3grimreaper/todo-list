@@ -1,31 +1,27 @@
 const title = document.querySelector('#title')
-const desc = document.querySelector('#description')
-const date = document.querySelector('#duedate')
 const priority = document.querySelector('#priority')
-const notes = document.querySelector('#notes')
-const cardContainer = document.querySelector('.taskcard-cont')
 
 class Task {
-  constructor(title, desc, date, priority, notes) {
+  constructor(title, priority) {
     this.title = title
-    this.desc = desc
-    this.date = date
-    this.notes = notes
     this.priority = priority
   }
 }
-
 export function addTask(btn, modal) {
   btn.addEventListener('click', () => {
     modal.showModal()
   })
 }
 
-export function createTaskCard() {
-  const newTaskCard = document.createElement('div')
-  newTaskCard.classList.add('taskcard')
-  cardContainer.appendChild(newTaskCard)
-}
+// export function createTaskCard(tasksArray) {
+//   let i = 0
+//   const newTaskCard = document.createElement('div')
+//   newTaskCard.classList.add('taskcard')
+//   newTaskCard.id = i
+//   newTaskCard.textContent = `${tasksArray[i].title} ${tasksArray[i].desc} ${tasksArray[i].date} ${tasksArray[i].priority}`
+//   cardContainer.appendChild(newTaskCard)
+//   i += 1
+// }
 
 export function closeModal(btn, modal) {
   btn.addEventListener('click', () => {
@@ -34,22 +30,11 @@ export function closeModal(btn, modal) {
 }
 
 export function pushTask() {
-  return new Task(
-    title.value,
-    desc.value,
-    date.value,
-    priority.value,
-    notes.value
-  )
+  return new Task(title.value, priority.value)
 }
 
 export function formValidation() {
-  if (
-    title.reportValidity() &&
-    desc.reportValidity() &&
-    date.reportValidity() &&
-    priority.reportValidity()
-  ) {
+  if (title.reportValidity() && priority.reportValidity()) {
     return true
   }
   return false
